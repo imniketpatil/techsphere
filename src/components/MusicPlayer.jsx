@@ -9,6 +9,7 @@ import VectorPlay from "../assets/VectorPlay.png";
 import VectorVolume from "../assets/VectorVolume.png";
 import "../scss/MusicPlayer.scss";
 import { addId } from "../utils/addRecentId";
+import Loading from "./Loading";
 
 const MusicPlayer = () => {
   const audioRef = useRef(null); // Ref for controlling the audio element
@@ -16,7 +17,7 @@ const MusicPlayer = () => {
   const [progress, setProgress] = useState(0); // State for the progress bar
   const [isMuted, setIsMuted] = useState(false); // State for mute/unmute
 
-  const currentSongId = localStorage.getItem("currentSongId");
+  const currentSongId = localStorage.getItem("currentSongId") || ZCZ5f7Kd;
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["SongPlaying", currentSongId],
@@ -71,7 +72,12 @@ const MusicPlayer = () => {
     }
   };
 
-  if (isLoading) return <div className="loading">Loading...</div>;
+  if (isLoading)
+    return (
+      <div className="loading">
+        <Loading />
+      </div>
+    );
   if (isError) return <div className="error">Error: {error.message}</div>;
 
   const songData = data?.data?.[0];

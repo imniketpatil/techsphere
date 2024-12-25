@@ -26,7 +26,7 @@ const SongSection = () => {
   const hiddenRoutes = ["/TopTracks", "/Favourites", "/RecentlyPlayed"];
   const shouldHide = hiddenRoutes.includes(location.pathname);
 
-  const debouncedSetText = debounce(setText, 300);
+  const debouncedSetText = debounce(setText, 50);
 
   return (
     <div className="song-list">
