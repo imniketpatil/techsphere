@@ -17,7 +17,7 @@ const MusicPlayer = () => {
   const [progress, setProgress] = useState(0); // State for the progress bar
   const [isMuted, setIsMuted] = useState(false); // State for mute/unmute
 
-  const currentSongId = localStorage.getItem("currentSongId") || ZCZ5f7Kd;
+  const currentSongId = localStorage.getItem("currentSongId") || "ZCZ5f7Kd";
 
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["SongPlaying", currentSongId],
