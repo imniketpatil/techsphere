@@ -1,0 +1,61 @@
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+}
+.music-player .music-info {
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.music-player .music-info .song-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+.music-player .music-info .song-artist {
+  font-size: 1rem;
+  color: #aaa;
+  text-align: left;
+}
+.music-player .poster-container {
+  margin-bottom: 20px;
+}
+.music-player .poster-container .song-poster {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.music-player .controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.music-player .controls-container .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.music-player .controls-container .icon:hover {
+  transform: scale(1.1);
+}
+.music-player .controls-container .icon.play-icon {
+  width: 32px;
+  height: 32px;
+}
+.music-player .controls-container .playback-controls {
+  display: flex;
+  gap: 15px;
+}/*# sourceMappingURL=MusicPlayer.css.map */

@@ -1,0 +1,42 @@
+.menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+}
+.menu #logo {
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.menu .menu-items {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.menu .menu-items li {
+  margin: 10px 0;
+  text-align: start;
+}
+.menu .menu-items li p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.menu .menu-items li p:hover {
+  color: #1db954;
+  cursor: pointer;
+}
+.menu #profile {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 20px;
+}/*# sourceMappingURL=Menu.css.map */

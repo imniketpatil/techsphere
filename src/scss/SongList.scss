@@ -1,0 +1,54 @@
+.song-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+  //   overflow-y: scroll;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; // Adjust to match your theme
+  }
+
+  .search-container {
+    position: relative; // Enables positioning for child elements
+    width: 100%;
+    margin-bottom: 10px;
+
+    #searchbar {
+      width: 100%;
+      height: 40px;
+      padding: 8px 16px;
+      padding-right: 40px; // Leaves space for the search icon
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+      background-color: transparent;
+
+      &::placeholder {
+        color: #aaa; // Lighter color for placeholder
+      }
+
+      &:focus {
+        border-color: #1db954; // Spotify green
+        box-shadow: 0 0 4px #1db954;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px; // Aligns the icon inside the input
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      pointer-events: none; // Prevents interaction with the icon
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// App.scss
+
+.songsectionfull {
+  display: block; // Make this column visible by default on large screens
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.songsectionshort {
+  display: none; // Hide this column by default
+
+  // On small screens (less than 768px), show the OffCanvasExample
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+// For larger screens, hide the OffCanvasExample column
+@media (min-width: 768px) {
+  .songsectionshort {
+    display: none;
+  }
+}
+
+// Button visibility on small screens
+.songsection-canvas .btn {
+  display: block;
+  margin-bottom: 10px;
+  // On large screens, hide the button
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+// Custom Offcanvas styling to make it slide from the bottom
+.offcanvas-bottom {
+  top: auto;
+  bottom: 0;
+  height: 50%; // Adjust this value for the desired Offcanvas height
+  margin: 0;
+}

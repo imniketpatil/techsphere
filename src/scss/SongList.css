@@ -1,0 +1,45 @@
+.song-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+.song-list h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.song-list .search-container {
+  position: relative;
+  width: 100%;
+}
+.song-list .search-container #searchbar {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+.song-list .search-container #searchbar::-moz-placeholder {
+  color: #aaa;
+}
+.song-list .search-container #searchbar::placeholder {
+  color: #aaa;
+}
+.song-list .search-container #searchbar:focus {
+  border-color: #1db954;
+  box-shadow: 0 0 4px #1db954;
+}
+.song-list .search-container .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}/*# sourceMappingURL=SongList.css.map */

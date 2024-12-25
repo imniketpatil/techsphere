@@ -1,0 +1,47 @@
+.menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start; // Center aligns the menu items with the logo and profile
+  padding: 10px;
+
+  #logo {
+    height: 30px; // Slightly larger for better visibility
+    margin-bottom: 20px; // Adds spacing below the logo
+    margin-top: 10px; // Adds spacing below the logo
+  }
+
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    width: 100%; // Ensures it takes the full width of the container for consistent alignment
+    flex-grow: 1; // Allow this element to grow and occupy available vertical space
+    display: flex; // Use flexbox for better layout control
+    flex-direction: column; // Arrange items vertically
+    justify-content: start;
+    li {
+      margin: 10px 0;
+      text-align: start; // Centers the text horizontally
+
+      p {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #1db954; // Spotify green color
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  #profile {
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 20px; // Adds spacing above the profile
+  }
+}
